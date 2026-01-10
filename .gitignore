@@ -1,0 +1,10 @@
+# Flutter
+build/
+.dart_tool/
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Runner/Assets.xcassets/
