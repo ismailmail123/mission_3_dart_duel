@@ -1,5 +1,6 @@
 void main() {
   // 1. Buat List<Map<String, dynamic>> bernama teman
+  // ✅ Good job! Tipe data sudah sesuai.
   List<Map<String, dynamic>> teman = [
     // 2. Isi dengan minimal 3 data
     {'name': 'Budi', 'ultah': '2000-01-15'},
@@ -15,6 +16,7 @@ void main() {
   int tahunSekarang = 2026; // Sesuai petunjuk (tahun sekarang 2026)
 
   // Fungsi untuk mendapatkan nama bulan
+  // 💡 Tip: Bisa gunakan List string untuk nama bulan agar lebih ringkas: const ['JANUARI', ...][bulan-1].
   String getNamaBulan(int bulan) {
     switch (bulan) {
       case 1:
@@ -58,6 +60,8 @@ void main() {
 
     // 6. Cek jika ultah null atau kosong
     if (ultah == null || ultah.isEmpty) {
+      // ⚠️ Note: Hindari hardcode nama 'Andi'. Gunakan variable 'nama' agar dinamis untuk data lain.
+      // 💡 Sebaiknya langsung print pesan error di sini sesuai instruksi.
       if (nama == 'Andi') {
         tampilkanPesanAndi = true;
       }
@@ -81,6 +85,7 @@ void main() {
     }
   }
 
+  // 🧐 Logic ini kurang efektif jika data kosong bukan 'Andi'.
   // Tampilkan pesan Andi jika ada
   if (tampilkanPesanAndi) {
     print("\n- Data Andi tidak lengkap, dilewati...");
