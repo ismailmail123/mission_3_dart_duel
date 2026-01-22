@@ -1,3 +1,4 @@
+// ✅ Good job! Struktur class sudah benar.
 class BankAccount {
   // Property
   String namaPemilik;
@@ -8,6 +9,7 @@ class BankAccount {
 
   // Fungsi setor
   void setor(double jumlah) {
+    // 💡 Tip: Bisa tambahkan validasi jika jumlah < 0 agar lebih aman.
     saldo += jumlah;
     print('  - Setor tunai: Rp ${jumlah.toStringAsFixed(1)} -> Sukses!');
     print('  - Saldo sekarang: Rp ${saldo.toStringAsFixed(1)}');
@@ -23,6 +25,7 @@ class BankAccount {
         '    - GAGAL: Maaf, saldo kamu kurang Rp ${kurang.toStringAsFixed(1)} lagi nih!',
       );
     } else {
+      // ✅ Logic sudah tepat! Saldo hanya berkurang jika cukup.
       saldo -= jumlah;
       print('    - Sukses! Saldo tersisa: Rp ${saldo.toStringAsFixed(1)}');
     }
@@ -42,4 +45,6 @@ void main() {
 
   // Tarik tunai (contoh yang akan gagal)
   nasabah.tarik(2000000.0);
+  
+  // 🌟 Challenge: Coba tambahkan skenario tarik tunai yang berhasil juga di sini.
 }
